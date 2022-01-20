@@ -20,5 +20,8 @@
   "homepage": "https://github.com/vasyl1312/Faster_Express#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
   }
 }
