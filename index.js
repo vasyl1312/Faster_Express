@@ -12,9 +12,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/features', (req, res) => {
-    //res.send('<h1>Hello Express.js!</h1>');
-    //resolve(шлях текущої діректорії, в папці, файл)
     res.sendFile(path.resolve(__dirname, 'static', 'features.html'))
+});
+
+app.get('/download', (req, res) => {
+    //download file
+    res.download(path.resolve(__dirname, 'static', 'index.html'))
 });
 
 app.listen(PORT, () => {
