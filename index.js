@@ -14,11 +14,11 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, 'ejs'));
 
 app.get('/', (req, res) => {
-    res.render('index')
+    res.render('index', {title: 'Main page'})
 })
 
 app.get('/features', (req, res) => {
-    res.render('features')
+    res.render('features', {title: 'Features'})
 })
 // app.get('/', (req, res) => {
 //     //resolve(шлях текущої діректорії, в папці, файл)
