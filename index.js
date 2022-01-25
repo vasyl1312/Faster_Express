@@ -11,6 +11,12 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'static', 'index.html'))
 });
 
+app.get('/features', (req, res) => {
+    //res.send('<h1>Hello Express.js!</h1>');
+    //resolve(шлях текущої діректорії, в папці, файл)
+    res.sendFile(path.resolve(__dirname, 'static', 'features.html'))
+});
+
 app.listen(PORT, () => {
     console.log(`Server has been started on ${PORT}...`);
 });//14-50
