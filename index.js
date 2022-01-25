@@ -5,15 +5,12 @@ const __dirname = path.resolve();
 const PORT = process.env.PORT ?? 3000; //якщо є ПОРТ то беремо- як ні то 3000
 const app = express();
 
-app.get('/', (req, res) => {
-    //res.send('<h1>Hello Express.js!</h1>');
-    //resolve(шлях текущої діректорії, в папці, файл)
-    res.sendFile(path.resolve(__dirname, 'static', 'index.html'))
-});
+app.use(express.static(path.resolve(__dirname, 'static')))
 
-app.get('/features', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'static', 'features.html'))
-});
+// app.get('/', (req, res) => {
+//     //resolve(шлях текущої діректорії, в папці, файл)
+//     res.sendFile(path.resolve(__dirname, 'static', 'index.html'))
+// });
 
 app.get('/download', (req, res) => {
     //download file
