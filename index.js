@@ -1,11 +1,14 @@
 import express from "express";
 import path from "path";
+import {requestTime, logger} from "./middlewares.js";
 
 const __dirname = path.resolve();
 const PORT = process.env.PORT ?? 3000; //якщо є ПОРТ то беремо- як ні то 3000
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, 'static')))
+app.use(express.static(path.resolve(__dirname, 'static')));
+app.use(requestTime);//for middlewares
+app.use(logger);
 
 // app.get('/', (req, res) => {
 //     //resolve(шлях текущої діректорії, в папці, файл)

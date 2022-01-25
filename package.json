@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/vasyl1312/Faster_Express#readme",
   "dependencies": {
+    "colors": "^1.4.0",
     "express": "^4.17.2"
   },
   "devDependencies": {
