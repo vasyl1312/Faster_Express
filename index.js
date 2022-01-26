@@ -8,6 +8,8 @@ const PORT = process.env.PORT ?? 3000; //якщо є ПОРТ то беремо-
 const app = express();
 
 app.use(express.static(path.resolve(__dirname, 'static')));
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 app.use(requestTime);//for middlewares
 app.use(logger);
 app.use(serverRoutes);
