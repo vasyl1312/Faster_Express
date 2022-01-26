@@ -1,12 +1,11 @@
-import colors from "colors";//add color
+import colors from 'colors'
 
-//add time when request was done
 export function requestTime(req, res, next) {
-req.requestTime = Date.now();
-next(); //next(), that express can to continue 
+  req.requestTime = Date.now()
+  next()
 }
 
 export function logger(req, res, next) {
-console.log(colors.bgGreen.black(`Req.time: ${req.requestTime}`))
-    next();
+  console.log(colors.bgGreen.black(`Req.time: ${req.requestTime}`))
+  next()
 }
